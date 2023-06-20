@@ -1,5 +1,5 @@
 import React from "react";
-import Common from "components/Common";
+import Common from "components/auth/Common";
 
 const Signin = () => {
   return <Common title="로그인" />
