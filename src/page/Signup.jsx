@@ -1,9 +1,8 @@
 import React from 'react'
+import Common from 'components/Common'
 
 const Signup = () => {
-  return (
-    <div>Signup</div>
-  )
+  return  <Common title="회원가입"/>
 }
 
 export default Signup
