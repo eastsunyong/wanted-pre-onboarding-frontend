@@ -5,11 +5,6 @@ const GlobalStyle = createGlobalStyle`
 html {
     font-size: 62.5%;
     line-height: 1;
-
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none
   }
 
   * {
@@ -18,6 +13,10 @@ html {
     box-sizing: border-box;
   }
 
+  
+  button {
+    cursor: pointer;
+  }
 
 `
 export default GlobalStyle;
