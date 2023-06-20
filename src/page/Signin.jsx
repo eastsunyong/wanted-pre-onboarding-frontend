@@ -1,11 +1,8 @@
-import React from 'react'
+import React from "react";
+import Common from "components/Common";
 
 const Signin = () => {
-  return (
-    <div>
-      Signin
-    </div>
-  )
-}
+  return <Common title="로그인" />
+};
 
-export default Signin
+export default Signin;
