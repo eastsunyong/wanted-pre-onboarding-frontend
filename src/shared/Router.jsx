@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "App";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Signin,  Signup } from "page";
+import { Signin, Signup, TodoPage } from "page";
 
 const Router = () => {
+  const { isLog } = useContext(AuthContext);
+  console.log(isLog);
+
   return (
     <>
       <Routes>
-        <Route path="/signin" element={<Signin />} />
-        <Route path="/signup" element={<Signup />} />
-        {/* <Route path="*" element={<Navigate to="/" />} /> */}
+        <Route path="/signup" element={isLog ? <Navigate to="/todo" /> : <Signup />} />
+        <Route path="/signin" element={isLog ? <Navigate to="/todo" /> : <Signin />} />
+        <Route path="/todo" element={isLog ? <TodoPage /> : <Navigate to="/signin" />}/>
+      
+        <Route path="*" element={isLog ? <Navigate to="/todo"  /> : <Navigate to="/signin" />} />
       </Routes>
     </>
   );
