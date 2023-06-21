@@ -19,6 +19,7 @@ const AuthForm = (props) => {
 
     if (!emailCheckReg.test(currentEmail)) {
       setMassege("이메일을 확인해주세요");
+      setEmailValid(false)
     } else {
       setMassege('');
       setEmailValid(true);
@@ -28,15 +29,17 @@ const AuthForm = (props) => {
     const PasswordCheck = (e) => {
       const currentPassword = e.target.value;
       setPassword(currentPassword);
-      const passwordCheckReg = /^\S{8,}$/;
-  
-      if (!passwordCheckReg.test(currentPassword)) {
-        setMassege("8자 이상입니다");
-      } else {
+
+      if(currentPassword.length >= 8 ) {
         setMassege('');
         setPasswordValid(true);
       }
+      else {
+        setMassege("8자 이상입니다");
+        setPasswordValid(false);
+      }
     }
+
   return (
     <>
       <Sort>
