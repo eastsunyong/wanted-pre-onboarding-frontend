@@ -5,8 +5,6 @@ import { Signin, Signup, TodoPage } from "page";
 
 const Router = () => {
   const { isLog } = useContext(AuthContext);
-  console.log(isLog);
-
   return (
     <>
       <Routes>
