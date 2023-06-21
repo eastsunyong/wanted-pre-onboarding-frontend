@@ -96,6 +96,7 @@ const Sort = styled.div`
     border-radius: 0.4rem;
     border: 1px solid gray;
     padding-left: 0.6rem;
+    outline: none;
   }
 
   .unable {
@@ -109,20 +110,6 @@ const Msg = styled.div`
   align-items: center;
   justify-content: center;
   color: red;
-`
-
-const Button = styled.button`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 4rem;
-    margin: 1rem 2rem;
-    border: none;
-    border-radius: 0.6rem;
-    background-color: #4ec5f4;
-    color: white;
-    font-size: 1.4rem;
-    font-weight: 600;
 `
 
 export default AuthForm;
