@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useNavigate } from 'react-router-dom'
-import { SignupApi } from 'api/api'
+import { SignupApi } from 'api/loginApi'
 
 const SignupBtn = ({emailValid , passwordValid, email, password}) => {
     const nav = useNavigate();

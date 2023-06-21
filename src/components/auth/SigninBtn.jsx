@@ -2,7 +2,7 @@ import React, {useContext} from 'react'
 import { AuthContext } from 'App'
 import styled from 'styled-components'
 import { useNavigate } from 'react-router-dom'
-import { SigninApi } from 'api/api'
+import { SigninApi } from 'api/loginApi'
 
 const SigninBtn = ({emailValid , passwordValid, email, password}) => {
     const nav = useNavigate();
